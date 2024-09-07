@@ -3,11 +3,12 @@
         <script> 
             var timeout = setTimeout(TimeCheck, 1000); 
             var meta = document.createElement("meta");
-            meta.httpEquiv = "Refresh"
-            meta.content = "0; URL=https://hbr.org/2022/05/resisting-the-pressure-to-overwork"
+            
             function TimeCheck() { 
                 var h =  new Date().getHours(); 
                 if(h>=9 && h<=18) { 
+                    meta.httpEquiv = "Refresh"
+                    meta.content = "0; URL=https://hbr.org/2022/05/resisting-the-pressure-to-overwork"
                     document.head.appendChild(meta);
                 } 
             } 
